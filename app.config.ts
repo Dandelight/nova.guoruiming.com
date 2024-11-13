@@ -6,8 +6,11 @@ const { default: mdx } = pkg;
 export default defineConfig({
   ssr: true,
   server: {
-    baseURL: process.env.BASE_PATH,
-    preset: "static",
+    preset: "cloudflare-pages",
+
+    rollupConfig: {
+      external: ["node:async_hooks"],
+    },
   },
   extensions: ["mdx", "md"],
   vite: {
