@@ -1,6 +1,8 @@
 import BookCard from "~/components/BookCard";
 import BookGrid from "~/components/BookGrid";
 import Publication from "~/components/Publication";
+import ProjectCard from "~/components/ProjectCard/ProjectCard";
+import ProjectGrid from "~/components/ProjectGrid/ProjectGrid";
 
 # Welcome!
 
@@ -41,9 +43,23 @@ Powered by [solid.js](https://solidjs.com).
 
 ## Projects
 
-[Action App](https://xiaoxiaodou.club/)
+<ProjectGrid>
+  <ProjectCard
+    title="Action App"
+    description="A Flutter-based hybrid app featuring word role-playing games, combining mobile development with interactive storytelling."
+    imageUrl="https://placehold.co/600x400"
+    link="https://xiaoxiaodou.club/"
+    tags={["Flutter", "Android", "Gaming"]}
+  />
 
-[MirrorDream VR](https://qingnan.studio/)
+  <ProjectCard
+    title="MirrorDream VR"
+    description="An AI-powered VR role-playing game built in Unity, awarded Top 1 in 3D GenAI Track at AdventureX Hackathon."
+    imageUrl="https://placehold.co/600x400"
+    link="https://qingnan.studio/"
+    tags={["Unity", "VR", "AI", "Gaming"]}
+  />
+</ProjectGrid>
 
 ## Skills
 

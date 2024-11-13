@@ -1,0 +1,26 @@
+:root {
+  --color-primary: #335d92;
+  --color-primary-dark: #1a3a6e;
+  --color-primary-light: rgba(68, 107, 158, 0.1);
+  --color-text: #444;
+  --color-text-light: #666;
+  --color-text-lighter: #888;
+  --color-border: #eaeaea;
+  --color-background: white;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 100%;
+  margin: 3rem 0;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+  }
+}
