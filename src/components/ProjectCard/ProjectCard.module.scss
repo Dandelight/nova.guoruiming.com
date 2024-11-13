@@ -57,6 +57,14 @@
   padding: 0.25rem 0.75rem;
   border-radius: 1rem;
   font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  svg {
+    width: 1em;
+    height: 1em;
+  }
 }
 
 .actions {

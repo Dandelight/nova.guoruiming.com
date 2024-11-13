@@ -1,5 +1,27 @@
 import { Component } from "solid-js";
 import styles from "./ProjectCard.module.scss";
+import {
+  FaBrandsUnity,
+  FaBrandsAndroid,
+  FaSolidVrCardboard,
+  FaSolidGamepad,
+  FaBrandsPython,
+  FaBrandsReact,
+  FaBrandsDocker,
+} from "solid-icons/fa";
+import { SiFlutter, SiPytorch } from "solid-icons/si";
+
+const iconMap = {
+  Unity: FaBrandsUnity,
+  Android: FaBrandsAndroid,
+  VR: FaSolidVrCardboard,
+  Gaming: FaSolidGamepad,
+  Python: FaBrandsPython,
+  React: FaBrandsReact,
+  Docker: FaBrandsDocker,
+  Flutter: SiFlutter,
+  AI: SiPytorch,
+};
 
 interface ProjectCardProps {
   title: string;
@@ -21,7 +43,9 @@ const ProjectCard: Component<ProjectCardProps> = (props) => {
         {props.tags && (
           <div class={styles.tags}>
             {props.tags.map((tag) => (
-              <span class={styles.tag}>{tag}</span>
+              <span class={styles.tag}>
+                {iconMap[tag] && <Dynamic component={iconMap[tag]} />} {tag}
+              </span>
             ))}
           </div>
         )}
