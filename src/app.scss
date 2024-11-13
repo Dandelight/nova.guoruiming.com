@@ -1,0 +1,105 @@
+body {
+  font-family: Gordita, Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    a {
+      text-decoration: none;
+      color: #335d92;
+      font-weight: 500;
+      transition: color 0.2s;
+
+      &:hover {
+        color: #1a3a6e;
+      }
+    }
+  }
+}
+
+main {
+  flex: 1;
+  padding: 2rem;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100vh;
+  background-color: #fff;
+  box-shadow: 2px 0 4px rgba(0,0,0,0.1);
+  transition: left 0.3s ease;
+  padding: 2rem;
+  
+  &.open {
+    left: 0;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin: 1rem 0;
+      
+      a {
+        color: #335d92;
+        text-decoration: none;
+        
+        &:hover {
+          color: #1a3a6e;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background-color: #335d92;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  margin-top: auto;
+}
+
+h1 {
+  color: #335d92;
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 100;
+  line-height: 1.1;
+  margin: 2rem 0;
+}
+
+p {
+  line-height: 1.5;
+  margin: 1rem 0;
+}
+
+@media (min-width: 480px) {
+  main {
+    padding: 3rem;
+  }
+}
