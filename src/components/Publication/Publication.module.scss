@@ -1,0 +1,79 @@
+.publication {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  border-left: 3px solid #335d92;
+  background: rgba(51, 93, 146, 0.03);
+  margin-bottom: 1.5rem;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateX(4px);
+  }
+
+
+}
+
+.image {
+  flex: 0 0 200px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+}
+
+.content {
+  flex: 1;
+}
+
+.title {
+  margin: 0 0 0.75rem;
+  font-size: 1.25rem;
+  color: #335d92;
+  font-weight: 600;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.authors {
+  margin: 0 0 0.5rem;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+.venue {
+  margin: 0;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.venueName {
+  font-style: italic;
+  color: #666;
+}
+
+.year {
+  color: #888;
+}
+
+@media (max-width: 640px) {
+  .publication {
+    flex-direction: column;
+  }
+
+  .image {
+    flex: 0 0 150px;
+  }
+}

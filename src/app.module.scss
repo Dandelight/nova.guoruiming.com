@@ -1,7 +1,21 @@
+:root {
+  --color-primary: #335d92;
+  --color-primary-dark: #1a3a6e;
+  --color-primary-light: rgba(68, 107, 158, 0.1);
+  --color-text: #444;
+  --color-text-light: #666;
+  --color-text-lighter: #888;
+  --color-border: #eaeaea;
+  --color-background: white;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
 .nav {
   width: 100%;
-  border-bottom: 1px solid #eaeaea;
-  background: white;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-background);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -18,7 +32,7 @@
 }
 
 .navLink {
-  color: #335d92;
+  color: var(--color-primary);
   text-decoration: none;
   font-size: 1rem;
   font-weight: 500;
@@ -26,7 +40,7 @@
   padding: 0.5rem;
 
   &:hover {
-    color: #1a3a6e;
+    color: var(--color-primary-dark);
   }
 }
 
