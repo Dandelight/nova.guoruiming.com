@@ -13,7 +13,7 @@ const SkillsCard = () => {
   return (
     <div class={styles.skillsGrid}>
       <div class={styles.skillCategory}>
-        <h3>Development</h3>
+        <h3>Machine Learning</h3>
         <div class={styles.skillItems}>
           <span>
             <FaBrandsPython /> Python

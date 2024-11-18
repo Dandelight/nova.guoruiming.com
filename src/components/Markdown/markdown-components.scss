@@ -1,0 +1,158 @@
+// Variables
+$primary-color: #000;
+$secondary-color: #fff;
+$slate-700: #334155;
+$slate-200: #e2e8f0;
+
+// Mixins
+@mixin dark-mode {
+  @media (prefers-color-scheme: dark) {
+    @content;
+  }
+}
+
+// Base styles
+body {
+  --line-height: 1.5rem; // Adjust as needed
+}
+
+// Component styles
+.paragraph {
+  margin-top: 1rem;
+}
+
+.ordered-list {
+  list-style-type: decimal;
+
+  > li {
+    margin-left: 1.5rem;
+  }
+}
+
+.unordered-list {
+  list-style-type: square;
+
+  > li {
+    margin-left: 1rem;
+  }
+}
+
+.blockquote {
+  margin: 2rem 0;
+  padding-left: 0.5rem;
+  font-weight: 500;
+  font-style: italic;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+
+  @include dark-mode {
+    color: $slate-200;
+  }
+
+  > span {
+    width: 1rem;
+  }
+
+  > div > p {
+    margin-top: 0;
+  }
+}
+
+.pre-wrapper {
+  margin: 1rem 0;
+
+  .pre-header {
+    background-color: $primary-color;
+    color: $secondary-color;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1;
+
+    @include dark-mode {
+      background-color: $secondary-color;
+      color: $primary-color;
+    }
+  }
+
+  pre {
+    margin: 0;
+  }
+}
+
+.heading {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  scroll-margin-top: 2rem;
+
+  &-2 {
+    @extend .heading;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin: 2rem 0 1rem;
+  }
+
+  &-3 {
+    @extend .heading;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    margin: 2rem 0 1rem;
+  }
+
+  &-4 {
+    @extend .heading;
+    font-size: 1.125rem;
+    line-height: 1rem;
+    margin: 2rem 0 1rem;
+  }
+}
+
+.heading-link {
+  position: relative;
+  top: 1px;
+
+  svg {
+    fill: none;
+
+    path {
+      stroke: currentColor;
+      stroke-width: 3;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+  }
+}
+
+.link {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.post-image {
+  width: 100%;
+}
+
+.aside {
+  border-left: 2px solid $primary-color;
+  padding-left: 0.5rem;
+  margin-top: 1rem;
+
+  @include dark-mode {
+    border-color: $secondary-color;
+  }
+
+  > div:first-child {
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    line-height: 1;
+    font-weight: 500;
+    user-select: none;
+  }
+
+  > div:last-child > *:first-child {
+    margin-top: 0;
+  }
+}

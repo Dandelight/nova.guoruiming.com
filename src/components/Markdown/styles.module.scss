@@ -1,0 +1,145 @@
+// Base styles for typography
+.paragraph {
+  margin-top: 1rem;
+}
+
+// Lists
+.orderedList {
+  list-style-type: decimal;
+
+  li {
+    margin-left: 1.5rem;
+  }
+}
+
+.unorderedList {
+  list-style-type: square;
+
+  li {
+    margin-left: 1rem;
+  }
+}
+
+// Blockquote
+.blockquote {
+  margin: 2rem 0;
+  padding-left: 1rem;
+  color: #334155; // slate-700
+  font-weight: 500;
+  font-style: italic;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+
+  .quoteSymbol {
+    width: 1rem;
+  }
+
+  .quoteContent {
+    p {
+      margin-top: 0;
+    }
+  }
+
+  :global(.dark) & {
+    color: #e2e8f0; // slate-200
+  }
+}
+
+// Code blocks
+.preWrapper {
+  margin: 1rem 0;
+
+  .preHeader {
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    font-size: 0.875rem;
+    line-height: 1;
+
+    :global(.dark) & {
+      background: #fff;
+      color: #000;
+    }
+  }
+}
+
+// Headings
+.heading {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  scroll-margin-top: 2rem;
+
+  &.h2 {
+    font-size: 1.5rem;
+    line-height: 2;
+    margin: 2rem 0 1rem;
+  }
+
+  &.h3 {
+    font-size: 1.25rem;
+    line-height: 2;
+    margin: 2rem 0 1rem;
+  }
+
+  &.h4 {
+    font-size: 1.125rem;
+    line-height: 1;
+    margin: 2rem 0 1rem;
+  }
+}
+
+// Links
+.link {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+// Heading link icon
+.headingLink {
+  position: relative;
+  top: 1px;
+
+  &.h2Icon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  &.h3Icon {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  &.h4Icon {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+}
+
+// Aside
+.aside {
+  border-left: 2px solid #000;
+  padding-left: 1rem;
+  margin-top: 1rem;
+
+  :global(.dark) & {
+    border-left-color: #fff;
+  }
+
+  .asideLabel {
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    line-height: 1;
+    font-weight: 500;
+    user-select: none;
+  }
+
+  .asideContent {
+    > *:first-child {
+      margin-top: 0;
+    }
+  }
+}
